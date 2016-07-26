@@ -12,7 +12,6 @@
     "test": "gulp karma",
     "start": "gulp"
   },
-  "pre-commit": "lint",
   "repository": {
     "type": "git",
     "url": "https://github.com/NereusTeam/NereusTeam.git"
