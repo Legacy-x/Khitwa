@@ -10,8 +10,7 @@
   ],
   "scripts": {
     "test": "gulp karma",
-    "start": "gulp",
-    "lint": "jscs ./"
+    "start": "gulp"
   },
   "pre-commit": "lint",
   "repository": {
@@ -46,6 +45,7 @@
     "mongoose": "^4.1.0",
     "morgan": "^1.1.1",
     "q": "^1.4.1",
-    "request": "^2.36.0"
+    "request": "^2.36.0",
+    "jquery"  : "1.11.0"
   }
 }

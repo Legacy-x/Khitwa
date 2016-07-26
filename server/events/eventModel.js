@@ -9,8 +9,8 @@ var eventSchema = new mongoose.Schema({
   	type: mongoose.Schema.Types.ObjectId,
   	ref: 'User'
   },
-  startDate : String,
-  endDate : String,
+  startDate : Date,
+  endDate : Date,
   location : String,
   locationId : String,
   type : String,
@@ -18,7 +18,7 @@ var eventSchema = new mongoose.Schema({
   skillsrequired : [String],
   startHour : String ,
   endHour : String,
-  poster : String,
+  poster : {data: Buffer, contentType: String},
   users : [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
 });
 var Event=mongoose.model('Event', eventSchema);
