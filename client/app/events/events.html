@@ -20,9 +20,9 @@
         <img  src="{{event.poster}}" 
             style="float : right ;    margin-top: -2%" width="200px">
             <ul>
-            	<li >
-            		<h2><a href="#/event/{{event._id}}">{{event.title}}</a></h2>
-            	</li>
+              <li >
+                <h2 style="font-size : 20px"><a href="#/event/{{event._id}}">{{event.title}}</a></h2>
+              </li>
             </ul>
             <p>Type: {{event.type}}</p>
             <p>Start Date: {{event.startDate | date}}</p>
@@ -36,4 +36,3 @@
     </div>
   </div>
 </div>
-
