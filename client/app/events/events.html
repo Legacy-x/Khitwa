@@ -25,8 +25,8 @@
             	</li>
             </ul>
             <p>Type: {{event.type}}</p>
-            <p>Start Date: {{event.startDate}}</p>
-            <p>End Date: {{event.endDate}}</p>
+            <p>Start Date: {{event.startDate | date}}</p>
+            <p>End Date: {{event.endDate | date}}</p>
             <p><a class="btn btn-primary btn-lg" href="#/event/{{event._id}}" role="button">More Details</a></p>
       </div>
       <div class="clear"></div>
