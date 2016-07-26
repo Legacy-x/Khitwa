@@ -8,7 +8,10 @@
     "Tawfik Kahwaje <twafik.kahwaje@gmail.com>",
     "Maryam Elham <maryamelham7@gmail.com>"
   ],
-  
+  "scripts": {
+    "test": "gulp karma",
+    "start": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/NereusTeam/NereusTeam.git"
@@ -30,6 +33,7 @@
     "karma-sinon": "^1.0.4",
     "karma-unicorn-reporter": "^0.1.4",
     "mocha": "^2.3.4",
+    "pre-commit": "^1.1.1",
     "sinon": "^1.17.2"
   },
   "dependencies": {
