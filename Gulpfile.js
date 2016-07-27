@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var sync = require('browser-sync');
 var nodemon = require('gulp-nodemon');
-var KarmaServer = require('karma').Server;
+//var KarmaServer = require('karma').Server;
 
 // the paths to our app files
 var paths = {
