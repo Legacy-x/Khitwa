@@ -5,6 +5,7 @@ angular.module('Khitwa', [
   'Khitwa.event',
   'Khitwa.events',
   'Khitwa.user',
+  'Khitwa.FB',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
@@ -13,6 +14,10 @@ angular.module('Khitwa', [
       templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'
     })
+    /*.when('/like',{
+      templateUrl: 'app/events/events.html',
+      controller: 'myController'
+    })*/
     .when('/signup', {
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'

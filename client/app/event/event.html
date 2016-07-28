@@ -1,3 +1,4 @@
+
 <ul class="nav nav-tabs nav-justified" style="margin-bottom: 10px;">
   <li role="presentation" class="active"    >
       <a  href="#/events">Events</a>
@@ -13,13 +14,14 @@
   </li>
 </ul>
 
-
+<div class="container ">
 	<p>Event Title: {{event.title}}</p>
-  <p>Start Date: {{event.startDate}}</p>
-	<p>End Date: {{event.endDate}}</p>
+  <p>Start Date: {{event.startDate | date}}</p>
+	<p>End Date: {{event.endDate | date}}</p>
   <p>Location: {{event.location}}</p>
   <p>Event Type: {{event.type}}</p>
   <p>Description: {{event.description}}</p>
+  <p>Event website: {{event.website}}</p>
   <p>Skill Required: 
       <ul>
         <li ng-repeat="skill in event.skillsrequired">
@@ -37,4 +39,28 @@
   </ul>
   </p>
   <button ng-click="join()">Join</button>
+
+<!-- face book like -->
+<div ng-controller="myController" class="container ">
+<!-- <div ng-controller="EventCtrl"> -->
+        <div class="container">
+            <div>
+                <!-- <div fb-like></div> -->
+                
+                <!--     Use this format for a custom URL -->
+                    <div fb-like="event.website"></div>
+                
+            </div>
+            <div>
+            <!--     <div tweet="event.website"></div> -->
+                
+                <!--     Use this format for a custom URL -->
+                    <div tweet="event.title" tweet-url="event.website"></div>
+                
+            </div>
+            
+        </div>
 </div>
+</div>
+</div>
+

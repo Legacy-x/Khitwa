@@ -16,9 +16,10 @@ var eventSchema = new mongoose.Schema({
   type : String,
   description : String,
   skillsrequired : [String],
+  website: String,
   startHour : String ,
   endHour : String,
-  poster : {data: Buffer, contentType: String},
+  poster : String,
   users : [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
 });
 var Event=mongoose.model('Event', eventSchema);

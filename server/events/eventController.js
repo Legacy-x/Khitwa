@@ -38,6 +38,7 @@ module.exports ={
 			type : req.body.type,
 			description : req.body.description,
 			skillsrequired : req.body.skillsrequired,
+			website: req.body.website,
 			startHour : req.body.startHour ,
 			endHour : req.body.endHour,
 			poster : req.body.poster
