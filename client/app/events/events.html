@@ -1,3 +1,4 @@
+<html ng-app="Khitwa.events">
 <ul class="nav nav-tabs nav-justified " style="margin-bottom: 10px;">
   <li role="presentation" class="active"    >
       <a  href="#/events">Events</a>
@@ -14,25 +15,41 @@
 </ul>
 
 <div class="container">
-  <div class="jumbotron" >
-    <div class="row" >
-      <div class="col-xs-6 jumbotron" ng-repeat="event in data.events">
-        <img  src="{{event.poster}}" 
-            style="float : right ;    margin-top: -2%" width="200px">
-            <ul>
-              <li >
-                <h2 style="font-size : 20px"><a href="#/event/{{event._id}}">{{event.title}}</a></h2>
-              </li>
-            </ul>
-            <p>Type: {{event.type}}</p>
-            <p>Start Date: {{event.startDate | date}}</p>
-            <p>End Date: {{event.endDate | date}}</p>
-            <p><a class="btn btn-primary btn-lg" href="#/event/{{event._id}}" role="button">More Details</a></p>
-      </div>
-      <div class="clear"></div>
-
-
-
+  <div class="row row-content" >
+    <div class="col-xs-12" >
+    <ul class="nav nav-tabs" role="tablist">
+      <li ng-class="{active:isSelected(1)}" role="presentation">
+          <a ng-click="select(1)" aria-controls="all events" role="tab">all events</a>
+      </li>
+      <li ng-class="{active:isSelected(2)}" role="presentation"> 
+          <a ng-click="select(2)" aria-controls="Education" role="tab">Education</a>
+      </li>
+      <li ng-class="{active:isSelected(3)}" role="presentation">
+          <a ng-click="select(3)" aria-controls="Medical" role="tab">Medical</a>
+      </li>
+      <li ng-class="{active:isSelected(4)}" role="presentation">
+          <a ng-click="select(4)" aria-controls="Social" role="tab">Social</a>
+      </li>
+    </ul>
+    <ul class="media-list tab-pane fade in active">
+      <div class="tab-content">
+        <li class="col-xs-6 jumbotron" ng-repeat="event in data.events | filter:filtText">
+          <img  src="{{event.poster}}" 
+              style="float : right ;    margin-top: -2%" width="200px">
+              <ul>
+                <li >
+                  <h2 style="font-size : 20px"><a href="#/event/{{event._id}}">{{event.title}}</a></h2>
+                </li>
+              </ul>
+              <p>Type: {{event.type}}</p>
+              <p>Start Date: {{event.startDate | date}}</p>
+              <p>End Date: {{event.endDate | date}}</p>
+              <p><a class="btn btn-primary btn-lg" href="#/event/{{event._id}}" role="button">More Details</a></p>
+        </li>
+        </div>
+      
+    </ul>
     </div>
   </div>
 </div>
+</html>
