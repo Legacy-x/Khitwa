@@ -1,12 +1,15 @@
 angular.module('Khitwa', [
   'Khitwa.services',
+
   'Khitwa.createEvent',
   'Khitwa.auth',
   'Khitwa.event',
   'Khitwa.events',
   'Khitwa.user',
   'Khitwa.FB',
-  'ngRoute'
+  'Khitwa.message',
+  'ngRoute',
+  'btford.socket-io'
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
@@ -41,6 +44,11 @@ angular.module('Khitwa', [
     .when('/user/:id', {
       templateUrl: 'app/user/user.html',
       controller: 'UserCtrl',
+      authenticate: true
+    })
+    .when('/message', {
+      templateUrl: 'app/event/message.html',
+      controller: 'MessageCtrl',
       authenticate: true
     })
     .otherwise({ redirectTo: '/events' });

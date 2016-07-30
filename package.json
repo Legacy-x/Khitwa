@@ -9,7 +9,6 @@
     "Maryam Elham <maryamelham7@gmail.com>"
   ],
   "scripts": {
-
     "start": "gulp"
   },
   "repository": {
@@ -35,6 +34,7 @@
     "mocha": "^2.3.4",
     "pre-commit": "^1.1.1",
     "sinon": "^1.17.2"
+
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -45,6 +45,10 @@
     "morgan": "^1.1.1",
     "q": "^1.4.1",
     "request": "^2.36.0",
+<<<<<<< HEAD
     "jquery"  : "1.11.0"
+=======
+    "socket.io":"^1.4.8"
+>>>>>>> 5e9e92b4265798cb2649cb50f600cf965d8d6255
   }
 }

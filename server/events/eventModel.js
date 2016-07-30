@@ -22,6 +22,8 @@ var eventSchema = new mongoose.Schema({
   startHour : String ,
   endHour : String,
   poster : String,
+  // msg:String,
+  // time: {type:Date, default:Date.now}
   users : [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
 });
 var Event=mongoose.model('Event', eventSchema);

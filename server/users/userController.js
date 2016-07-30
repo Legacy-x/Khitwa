@@ -125,6 +125,16 @@ module.exports = {
         res.status(500).send(err);
       res.json(user);
     })
+  } ,
+
+   getAllUsers : function (req,res,next) {
+    findAllusers({})
+      .then(function (users) {
+        res.json(users);
+      })
+      .fail(function (err) {
+        //next(err);
+      })
   }   
 
 };
