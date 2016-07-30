@@ -3,17 +3,19 @@ var userController = require('../users/userController.js');
 var eventController = require('../events/eventController.js');
 //var messageController = require('../message/messageController.js')
 var helpers = require('./helpers.js'); // our custom middleware
-var multer = require('multer');
-var storage =   multer.diskStorage({
-  destination: function (req, file, callback) {
-    callback(null, './uploads');
-  },
-  filename: function (req, file, callback) {
-    callback(null, file.fieldname + '-' + Date.now());
-  }
-});
+//var multer = require('multer');
+// var storage =   multer.diskStorage({
+//   destination: function (req, file, callback) {
+//     callback(null, './uploads');
+//   },
+//   filename: function (req, file, callback) {
+//     callback(null, file.fieldname + '-' + Date.now());
+//   }
+// });
 
-var upload = multer({ storage : storage},{limits : {fieldNameSize : 10}}).single('userPhoto');
+// var upload = multer({ storage : storage},{limits : {fieldNameSize : 10}}).single('userPhoto');
+
+
 module.exports = function (app, express) {
   app.post('/api/users/signin', userController.signin);
   app.post('/api/users/signup', userController.signup);  
@@ -22,14 +24,14 @@ module.exports = function (app, express) {
   app.get('/api/user/:id',userController.getUser);
   app.get('/api/events',eventController.allEvents);  
   app.post('/api/createEvent',eventController.newEvent);
-  app.post('/api/photo', function(req, res){
-    upload(req, res, function(err){
-      if(err){
-        return res.end("error uploading the file")
-      }
-      return res.end("file uploaded")
-    })    
-  });
+ // app.post('/api/photo', function(req, res){
+  //   upload(req, res, function(err){
+  //     if(err){
+  //       return res.end("error uploading the file")
+  //     }
+  //     return res.end("file uploaded")
+  //   })    
+  // });
   app.get('/api/event/:id',eventController.getEvent);
   app.post('/api/applyEvent',eventController.applyEvent);
 
