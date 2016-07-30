@@ -138,6 +138,15 @@ input[type="password"] {
 
 
 
+/*Map*/
+#eventMap {
+  width: 50%;
+  height: 400px;
+  float: left;
+}
+
+
+
 .card {
     padding-top: 20px;
     margin: 10px 0 20px 0;

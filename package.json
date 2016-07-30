@@ -9,10 +9,8 @@
     "Maryam Elham <maryamelham7@gmail.com>"
   ],
   "scripts": {
-    "test": "gulp karma",
     "start": "gulp"
   },
-  "pre-commit": "lint",
   "repository": {
     "type": "git",
     "url": "https://github.com/NereusTeam/NereusTeam.git"
@@ -47,6 +45,7 @@
     "morgan": "^1.1.1",
     "q": "^1.4.1",
     "request": "^2.36.0",
+    "jquery"  : "1.11.0",
     "socket.io":"^1.4.8"
   }
 }

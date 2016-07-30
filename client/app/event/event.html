@@ -1,3 +1,4 @@
+
 <ul class="nav nav-tabs nav-justified" style="margin-bottom: 10px;">
   <li role="presentation" class="active"    >
       <a  href="#/events">Events</a>
@@ -13,13 +14,15 @@
   </li>
 </ul>
 
-
+<div class="container ">
+<div style="width: 50%; float: left;">
 	<p>Event Title: {{event.title}}</p>
-  <p>Start Date: {{event.startDate| date}}</p>
+  <p>Start Date: {{event.startDate | date}}</p>
 	<p>End Date: {{event.endDate | date}}</p>
   <p>Location: {{event.location}}</p>
   <p>Event Type: {{event.type}}</p>
   <p>Description: {{event.description}}</p>
+  <p>Event website: {{event.website}}</p>
   <p>Skill Required: 
       <ul>
         <li ng-repeat="skill in event.skillsrequired">
@@ -30,6 +33,7 @@
   <p>Start Hour: {{event.startHour}}</p>
   <p>End Hour: {{event.endHour}}</p>
   <p>Users: 
+
   <ul ng-controller = "UserCtrl">
     <li ng-repeat="user in users">
       {{user}}
@@ -40,3 +44,29 @@
   <!-- <button ng-click="message()">event Messages</button> -->
   <a class="btn btn-primary btn-lg" href="#/event/{{event._id}}/message" role="button">event messages</a>
 </div>
+
+  
+  
+  
+  <br/>
+  <br/>
+
+<div ng-controller="myController" >
+  <div>
+    <div>
+      <div fb-like="event.website"></div>  
+    </div>
+    <br/>
+    <div>
+      <div tweet="event.title" tweet-url="event.website"></div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="eventMap"></div>
+</div>
+
+<!-- faceBook like and Twitter-->
+  
+</div>
+

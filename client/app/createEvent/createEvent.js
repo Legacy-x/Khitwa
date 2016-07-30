@@ -14,4 +14,23 @@ angular.module('Khitwa.createEvent', [])
 			console.error(error)
 		})
 	}
+
+if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            $scope.event.positionLat= position.coords.latitude;
+            $scope.event.positionLng= position.coords.longitude; 
+          }); 
+        } else {
+          // Browser doesn't support Geolocation
+          alert('your browser dos not support the geolocation');
+        }
+
+
+
+
+
+
+
+
+
 });

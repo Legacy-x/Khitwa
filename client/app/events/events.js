@@ -21,7 +21,6 @@ angular.module('Khitwa.events', [])
 	$scope.signout = function(){
 		Auth.signout();
 	}
-
 	$scope.userId = window.userId;
 	$scope.data={};
 	Events.getEvents()
@@ -32,3 +31,5 @@ angular.module('Khitwa.events', [])
 		console.error(error)
 	})
 });
+
+

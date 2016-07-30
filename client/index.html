@@ -4,6 +4,8 @@
 	<title>Khitwa</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATwz-5JuqDmx4C3_sdm6DR0l9OQYGVyps&libraries=geometry"></script>
+
 </head>
 <body>
 
@@ -13,9 +15,13 @@
 </div>
 	<div ng-view></div>
 </div>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
+
+<script src="lib/angulike/angulike.js"></script>
+<script src="app/auth/auth.js"></script>
 <script src="lib/socket.io-client/socket.io.js"></script>
 <script src="lib/angular-socket-io/socket.js"></script>
 <script src="lib/jquery/dist/jquery.min.js"></script>
@@ -25,6 +31,7 @@
 <script src="app/auth/auth.js"></script>
 <script src="app/createEvent/createEvent.js"></script>
 <script src="app/events/events.js"></script>
+<script src="app/event/FB.js"></script>
 <script src="app/event/event.js"></script>
 <script src="app/event/message.js"></script>
 <script src="app/user/user.js"></script>
