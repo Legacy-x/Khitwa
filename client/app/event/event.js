@@ -141,8 +141,10 @@ $scope.showUsers = function(){
 	})
 }
 
-$scope.message = function(){
-	$location.path('/message')
-}
+// $scope.message = function(){
+// 	$location.path('/message')
+// }
+
+
 
 });

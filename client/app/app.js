@@ -31,6 +31,11 @@ angular.module('Khitwa', [
       controller: 'EventCtrl',
       authenticate: true
     })
+    .when('/event/:id/message', {
+      templateUrl:'app/event/message.html',
+      controller:'MessageCtrl',
+      authenticate:true
+    })
     .when('/events', {
       templateUrl: 'app/events/events.html',
       controller: 'EventsCtrl',

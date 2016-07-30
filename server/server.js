@@ -26,16 +26,34 @@ db.once('open',function () {
 var chatSchema = mongoose.Schema({
 	username:String,
 	message:String,
-	time:{type:Date, default:Date.now}
+	time:{type:Date, default:Date.now},
+	 _owner : { 
+  		type: mongoose.Schema.Types.ObjectId,
+  		ref: 'Event'
+  	}
 });
 
-var Chat = mongoose.model('Message', chatSchema);
+var Chat = mongoose.model('Chat', chatSchema);
+
+
+	// getMessages : function (req,res,next) {
+ //  		console.log(req.parms.id);
+ //  		var id = (req.parms.id).toString();
+
+ //  		Event.find({}, function(err, doc){
+ //  			if(err)
+ //  				res.status(500).send(err);
+ //  			res.status(200).send(doc)
+ //  		});
+ //  	}
 
 
 var users = [];
+//var eventId = window.location.href.split('/')[5];
+
 io.on('connect', function(socket){
 	var query = Chat.find({});
-	 query.sort('-time').limit(8).exec( function(err,docs){
+	 query.sort('-time').limit(10).exec( function(err,docs){
 		if(err) throw err;
 		socket.emit('load old msgs', docs);
 	});
@@ -47,9 +65,10 @@ io.on('connect', function(socket){
 		socket.emit('users', {users:users});
 	});
 	socket.on('message', function(data){
-		io.emit('message', {username:username, message:data.message});
+		io.emit('message', {username:username, message:data.message, _owner:data._owner});
 		
-	var newMsg = new Chat({username:username, message:data.message});
+	var newMsg = new Chat({username:username, message:data.message,
+	 _owner:data._owner});
 
 	newMsg.save(function(err){
 		if(err) throw err
@@ -61,7 +80,8 @@ io.on('connect', function(socket){
 	socket.on('add-user', function(data){
 		if(users.indexOf(data.username)==-1){
 			io.emit('add-user', {
-				username:data.username
+				username:data.username,
+				eventId:data.eventId
 			});
 			username=data.username;
 			users.push(data.username);

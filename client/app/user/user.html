@@ -30,7 +30,7 @@
                     <h3>{{user.dateOfBirth | date}}</h3>
                     <h3>{{user.phoneNumber}}</h3>
                     <ul>
-            <li ng-repeat="event in user.events">
+            <li ng-repeat="event in eventsForUser">
               <a href="#/event/{{event}}">{{event}}</a>
             </li>
           </ul>

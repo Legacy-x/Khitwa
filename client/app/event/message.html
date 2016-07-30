@@ -3,12 +3,12 @@
 <!-- <div ng-controller = "MessageCtrl"> -->
 <div class="row">
   <div class="col-xs-8 chat-window">
-    
+    <div ng-controller = "EventCtrl">
       <div ng-repeat="message in messages">
         <span id="username" class="username">{{message.username}} :</span>
         <span class="message">{{message.message}}</span>   
       </div>
-   
+   </div>
   </div>
     <div class="col-xs-4 user-window">
      <h3> connected users </h3>
