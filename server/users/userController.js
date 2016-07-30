@@ -135,6 +135,14 @@ module.exports = {
       .fail(function (err) {
         //next(err);
       })
-  }   
+  }
 
+  // getAllEvents : function(req,res,next){
+  //   findAllusers({})
+  //   .populate('events')
+  //   .exec(function(err,event){
+  //     if (err) throw err;
+  //     console.log(event)
+  //   })
+  // }
 };

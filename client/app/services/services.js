@@ -38,7 +38,7 @@ angular.module('Khitwa.services', [])
     })
   } 
 
-  var getAllUser = function(){
+  var getAllUsers = function(){
       return $http({
         method : 'GET',
         url : '/api/users'
@@ -47,6 +47,8 @@ angular.module('Khitwa.services', [])
         return res.data;
       })
     } 
+
+
 
   var joinEvent = function (userID, EventId) {
     return $http({
@@ -59,12 +61,25 @@ angular.module('Khitwa.services', [])
     })
   }
 
+  // var getEventss = function(){
+  //   return ({
+  //     method:'GET',
+  //     url:'/api/getEvents'
+
+  //   })
+  //   .then(function(res){
+  //     return res.data;
+  //   })
+  // }
+
 	return {
 		getEvents: getEvents,
     createEvent: createEvent,
     getEvent: getEvent, 
     getUser : getUser,
-    joinEvent : joinEvent
+    joinEvent : joinEvent,
+    getAllUsers:getAllUsers,
+    getEvents:getEvents
 	};
 })
 

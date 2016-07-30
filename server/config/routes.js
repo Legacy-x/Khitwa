@@ -24,6 +24,8 @@ module.exports = function (app, express) {
   app.get('/api/user/:id',userController.getUser);
   app.get('/api/events',eventController.allEvents);  
   app.post('/api/createEvent',eventController.newEvent);
+  //app.get('/api/getEvents', userController.getAllEvents)
+  //app.get('/api/event/:id/message', )
  // app.post('/api/photo', function(req, res){
   //   upload(req, res, function(err){
   //     if(err){

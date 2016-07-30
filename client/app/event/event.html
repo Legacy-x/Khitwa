@@ -30,12 +30,13 @@
   <p>Start Hour: {{event.startHour}}</p>
   <p>End Hour: {{event.endHour}}</p>
   <p>Users: 
-  <ul>
-    <li ng-repeat="users in event.users">
-      {{users}}
+  <ul ng-controller = "UserCtrl">
+    <li ng-repeat="user in users">
+      {{user}}
     </li>
   </ul>
   </p>
-  <button ng-click="join()">Join</button>
-  <button ng-click="message()">event Messages</button>
+  <button class="btn btn-primary ng-click="join()">Join</button>
+  <!-- <button ng-click="message()">event Messages</button> -->
+  <a class="btn btn-primary btn-lg" href="#/event/{{event._id}}/message" role="button">event messages</a>
 </div>
