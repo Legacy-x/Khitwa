@@ -25,7 +25,22 @@ input[type=submit]:hover {
     background-color: #3CBC8D;
 }
 
+#username{
+  color:red;
+  font-weight: 800;
+}
 
+#users{
+  border-left-color: red;
+    border-left-width: thick;
+    border-collapse: collapse;
+    color: #F50517;
+    height: 505;
+    height: 400px;
+    background-color: cornsilk;
+    font-weight: 800;
+    border-color: red;
+}
 
 .navigation {
   width: 100%;

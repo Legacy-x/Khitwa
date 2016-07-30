@@ -1,5 +1,5 @@
 angular.module('Khitwa.event', [])
-.controller('EventCtrl', function ($scope, Events,$window, $routeParams, Auth) {
+.controller('EventCtrl', function ($scope, Events,$window, $routeParams, Auth, $location) {
 	$scope.signout = function(){
 		Auth.signout();
 	}
@@ -7,6 +7,9 @@ angular.module('Khitwa.event', [])
 
 	$scope.join = function(){
 		Events.joinEvent($scope.userId,$routeParams.id)
+		.then(function(){
+			$location.path('/user/:id')
+		})
 	}
 
 	$scope.showEvent = function(){
@@ -19,4 +22,22 @@ angular.module('Khitwa.event', [])
       });
 	}
 	$scope.showEvent();
+
+
+$scope.users={};
+
+$scope.showUsers = function(){
+	Events.getAllUser()
+	.then(function(users){
+		$scope.users.userName = users;
+	})
+	.catch(function(error){
+		console.log(error)
+	})
+}
+
+$scope.message = function(){
+	$location.path('/message')
+}
+
 });

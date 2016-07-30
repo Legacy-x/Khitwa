@@ -36,7 +36,17 @@ angular.module('Khitwa.services', [])
     .then(function(res){
       return res.data;
     })
-  }  
+  } 
+
+  var getAllUser = function(){
+      return $http({
+        method : 'GET',
+        url : '/api/users'
+      })
+      .then(function(res){
+        return res.data;
+      })
+    } 
 
   var joinEvent = function (userID, EventId) {
     return $http({
@@ -56,6 +66,10 @@ angular.module('Khitwa.services', [])
     getUser : getUser,
     joinEvent : joinEvent
 	};
+})
+
+.factory('Socket', function (socketFactory){
+  return socketFactory();
 })
 
 .factory('Auth', function ($http, $location, $window) {
