@@ -38,6 +38,8 @@ module.exports ={
 			type : req.body.type,
 			description : req.body.description,
 			skillsrequired : req.body.skillsrequired,
+			positionLat: req.body.positionLat,
+			positionLng: req.body.positionLng,
 			website: req.body.website,
 			startHour : req.body.startHour ,
 			endHour : req.body.endHour,

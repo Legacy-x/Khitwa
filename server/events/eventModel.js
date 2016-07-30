@@ -13,6 +13,8 @@ var eventSchema = new mongoose.Schema({
   endDate : Date,
   location : String,
   locationId : String,
+  positionLat: Number,
+  positionLng: Number,
   type : String,
   description : String,
   skillsrequired : [String],

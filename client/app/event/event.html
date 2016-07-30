@@ -15,6 +15,7 @@
 </ul>
 
 <div class="container ">
+<div style="width: 50%; float: left;">
 	<p>Event Title: {{event.title}}</p>
   <p>Start Date: {{event.startDate | date}}</p>
 	<p>End Date: {{event.endDate | date}}</p>
@@ -39,28 +40,22 @@
   </ul>
   </p>
   <button ng-click="join()">Join</button>
+  <br/>
+  <br/>
 
-<!-- face book like -->
-<div ng-controller="myController" class="container ">
-<!-- <div ng-controller="EventCtrl"> -->
-        <div class="container">
-            <div>
-                <!-- <div fb-like></div> -->
-                
-                <!--     Use this format for a custom URL -->
-                    <div fb-like="event.website"></div>
-                
-            </div>
-            <div>
-            <!--     <div tweet="event.website"></div> -->
-                
-                <!--     Use this format for a custom URL -->
-                    <div tweet="event.title" tweet-url="event.website"></div>
-                
-            </div>
-            
-        </div>
+<div ng-controller="myController" >
+  <div>
+    <div>
+      <div fb-like="event.website"></div>  
+    </div>
+    <br/>
+    <div>
+      <div tweet="event.title" tweet-url="event.website"></div>
+    </div>
+  </div>
 </div>
 </div>
+<div id="eventMap"></div>
 </div>
 
+<!-- faceBook like and Twitter-->

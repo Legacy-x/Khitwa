@@ -124,8 +124,12 @@ input[type="password"] {
 
 
 
-
-
+/*Map*/
+#eventMap {
+  width: 50%;
+  height: 400px;
+  float: left;
+}
 
 
 

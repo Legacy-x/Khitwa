@@ -13,3 +13,5 @@ angular.module('Khitwa.events', [])
 		console.error(error)
 	})
 });
+
+
