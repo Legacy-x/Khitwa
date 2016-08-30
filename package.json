@@ -4,9 +4,9 @@
   "description": "Build out website for volunteer events",
   "author": "Neruse Team<neruseteam3@gmail.com>",
   "contributors": [
-    "Mihyar Almasalma <eng.mihyear@gmail.com>",
-    "Tawfik Kahwaje <twafik.kahwaje@gmail.com>",
-    "Maryam Elham <maryamelham7@gmail.com>"
+    "Rana Kelani <rana.1926@hotmail.com>",
+    "Farah Amawi <amawifarah@gmail.com>",
+    "Aws Ahmed"
   ],
   "scripts": {
     "start": "gulp"
